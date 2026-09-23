@@ -29,8 +29,8 @@ if submitted:
     else:
         with st.spinner("Generating your personalized plan... Please wait..."):
             try:
-                # Using the stable gemini-1.5-flash model
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                # Using the stable gemini-2.5-flash model
+                model = genai.GenerativeModel('gemini-2.5-flash')
                 
                 prompt = f"""
                 Create a personalized 3-day fitness and diet plan for:
