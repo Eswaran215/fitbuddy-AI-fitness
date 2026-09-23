@@ -22,7 +22,7 @@ if st.button("Build my plan"):
         with st.spinner("Generating your personalized plan..."):
             try:
                 genai.configure(api_key=api_key)
-                model = genai.GenerativeModel('gemini-3.6-flash')
+                model = genai.GenerativeModel('gemini-1.6-flash')
                 
                 prompt = f"""
                 Create a detailed personalized fitness and diet plan for:
