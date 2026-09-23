@@ -6,8 +6,7 @@ st.set_page_config(page_title="FitBuddy AI", page_icon="🏋️‍♂️")
 st.title("🏋️‍♂️ FitBuddy - AI Fitness Plan Generator")
 st.write("Personalized Workout & Diet Plan Generator using Gemini AI")
 
-api_key = st.sidebar.text_input("Enter Gemini API Key", type="password")
-
+api_key = st.secrets.get("GEMINI_API_KEY") or st.sidebar.text_input("Enter Gemini API Key", type="password")
 name = st.text_input("What should we call you?")
 age = st.number_input("Age", min_value=10, max_value=100, value=25)
 weight = st.number_input("Weight (kg)", min_value=30, max_value=200, value=70)
